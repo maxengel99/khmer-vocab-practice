@@ -7,17 +7,16 @@ export class AudioFilesWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: Math.floor(Math.random() * 10) + 1,
-      value: ''
+      number: Math.floor(Math.random() * 1000) + 1,
+      value: '',
+      textValue: "",
+      answer: ""
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.checkAnswer = this.checkAnswer.bind(this);
-  }
-
-  updateNumber = (numValue) => {
-    this.setState({ number: numValue });
+    this.giveUp = this.giveUp.bind(this);
   }
 
   handleChange(ev){
@@ -27,24 +26,32 @@ export class AudioFilesWrapper extends Component {
   checkAnswer(ev){
     ev.preventDefault();
     if(this.state.number != parseInt(this.state.value)){
-      console.log("wrong");
+      this.setState({ textValue: "Incorrect" });
     } else {
-      console.log("correct");
+      this.setState({ textValue: "Correct" });
     }
   }
 
   handleClick(ev){
     ev.preventDefault();
-    this.setState({ number: Math.floor(Math.random() * 10) + 1});
+    this.setState({ number: Math.floor(Math.random() * 1000) + 1, textValue: "", value: "", answer: ""});
+  }
+
+  giveUp(ev){
+    ev.preventDefault();
+    this.setState({answer: this.state.number});
   }
   
   render() {
     return (
         <div>
-            <AudioBtn randomNum={this.state.number} />
+            <AudioBtn style={{cursor: "pointer"}} randomNum={this.state.number} />
             <button onClick={this.handleClick}>New Number</button>
             <input type="text" value={this.state.value} onChange={this.handleChange} />
             <button onClick={this.checkAnswer}>Check Answer</button>
+            <p>{this.state.textValue}</p>
+            <button onClick={this.giveUp}>I Give Up</button>
+            <p>{this.state.answer}</p>
         </div>
     );
   }
