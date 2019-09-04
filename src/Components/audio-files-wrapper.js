@@ -7,14 +7,30 @@ export class AudioFilesWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: Math.floor(Math.random() * 10) + 1
+      number: Math.floor(Math.random() * 10) + 1,
+      value: ''
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.checkAnswer = this.checkAnswer.bind(this);
   }
 
   updateNumber = (numValue) => {
     this.setState({ number: numValue });
+  }
+
+  handleChange(ev){
+    this.setState({ value: ev.target.value });
+  }
+
+  checkAnswer(ev){
+    ev.preventDefault();
+    if(this.state.number != parseInt(this.state.value)){
+      console.log("wrong");
+    } else {
+      console.log("correct");
+    }
   }
 
   handleClick(ev){
@@ -25,9 +41,10 @@ export class AudioFilesWrapper extends Component {
   render() {
     return (
         <div>
-            <p>Hello World</p>
             <AudioBtn randomNum={this.state.number} />
             <button onClick={this.handleClick}>New Number</button>
+            <input type="text" value={this.state.value} onChange={this.handleChange} />
+            <button onClick={this.checkAnswer}>Check Answer</button>
         </div>
     );
   }
