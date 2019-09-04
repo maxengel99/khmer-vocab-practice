@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { AudioBtn } from "./Components/audio-btn"
+import { AudioFilesWrapper } from "./Components/audio-files-wrapper"
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <AudioBtn />
+        <AudioFilesWrapper />
       </header>
     </div>
   );
