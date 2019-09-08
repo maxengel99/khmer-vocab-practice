@@ -27,7 +27,7 @@ export class AudioFilesWrapper extends Component {
 
   checkAnswer(ev) {
     ev.preventDefault();
-    if (this.state.number != parseInt(this.state.value)) {
+    if (this.state.number !== parseInt(this.state.value)) {
       this.setState({ textValue: "Incorrect" });
     } else {
       this.setState({ textValue: "Correct" });
@@ -61,18 +61,21 @@ export class AudioFilesWrapper extends Component {
           type="number"
           InputLabelProps={{ shrink: true }}
           margin="normal"
+          variant="filled"
         />
-        <Button variant="contained" onClick={this.checkAnswer}>
-          Check Answer
-        </Button>
-        <p>{this.state.textValue}</p>
-        <Button variant="contained" onClick={this.giveUp}>
-          I Give Up
-        </Button>
-        <Button variant="contained" onClick={this.handleClick}>
-          New Number
-        </Button>
-        <p>{this.state.answer}</p>
+        <div>
+          <Button style={{margin: "10px"}} variant="contained" onClick={this.checkAnswer}>
+            Check Answer
+          </Button>
+          <Button style={{margin: "10px"}} variant="contained" onClick={this.giveUp}>
+            I Give Up
+          </Button>
+          <Button style={{margin: "10px"}} variant="contained" onClick={this.handleClick}>
+            New Number
+          </Button>
+        </div>
+        <p style={{color: "black"}}>{this.state.textValue}</p>
+        <p style={{color: "black"}}>{this.state.answer}</p>
       </div>
     );
   }

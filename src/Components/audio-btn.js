@@ -1,37 +1,37 @@
 import React, { Component } from "react";
-import MusicButton from "../Images/musicbutton.png";
 
 /*************************************************************************/
 
-export class AudioBtn extends Component {
+function createUrl(num) {
+  return `https://raw.githubusercontent.com/maxengel99/khmer-number-website/master/src/AudioFiles/${num}.mp3`;
+}
 
+export class AudioBtn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      audio: new Audio(
-        require("../AudioFiles/" + this.props.randomNum + ".mp3")
-      )
+      src: createUrl(this.props.randomNum)
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(ev) {
-    ev.preventDefault();
-    this.state.audio.play();
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      audio: new Audio(require("../AudioFiles/" + nextProps.randomNum + ".mp3"))
-    });
+    this.setState(
+      {
+        src: createUrl(nextProps.randomNum)
+      },
+      function() {
+        this.refs.audio.pause();
+        this.refs.audio.load();
+      }
+    );
   }
 
   render() {
-
     return (
       <div>
-        <img src={MusicButton} onClick={this.handleClick} />
-        <audio src={"../AudioFiles/6.mp3"} />
+          <audio controls ref="audio">
+            <source src={this.state.src} />
+          </audio>
       </div>
     );
   }
