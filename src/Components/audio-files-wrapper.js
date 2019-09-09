@@ -30,7 +30,7 @@ export class AudioFilesWrapper extends Component {
     if (this.state.number !== parseInt(this.state.value)) {
       this.setState({ textValue: "Incorrect" });
     } else {
-      this.setState({ textValue: "Correct" });
+      this.setState({ textValue: "Correct!!!" });
     }
   }
 
