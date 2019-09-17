@@ -9,7 +9,7 @@ export class AudioFilesWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: Math.floor(Math.random() * 1000) + 1,
+      number: Math.floor(Math.random() * 3034) + 1,
       value: "",
       textValue: "",
       answer: ""
@@ -37,7 +37,7 @@ export class AudioFilesWrapper extends Component {
   handleClick(ev) {
     ev.preventDefault();
     this.setState({
-      number: Math.floor(Math.random() * 1000) + 1,
+      number: Math.floor(Math.random() * 3034) + 1,
       textValue: "",
       value: "",
       answer: ""
