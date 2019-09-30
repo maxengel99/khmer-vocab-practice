@@ -13,17 +13,18 @@ export class NumberCategory extends Component {
       textValue: "",
       answer: "",
       startNum: 0,
-      endNum: 10
+      endNum: 10,
+      errorMsg: ""
     };
 
     this.number = Math.floor(
-      Math.random() * (this.state.endNum + 1 - this.state.startNum) +
+      Math.random() * (this.state.endNum - this.state.startNum + 1) +
         this.state.startNum
     );
 
-    this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.checkAnswer = this.checkAnswer.bind(this);
+    this.newAudio = this.newAudio.bind(this);
     this.giveUp = this.giveUp.bind(this);
     this.handleStartChange = this.handleStartChange.bind(this);
     this.handleEndChange = this.handleEndChange.bind(this);
@@ -42,8 +43,23 @@ export class NumberCategory extends Component {
     }
   }
 
-  handleClick(ev) {
+  newAudio(ev) {
     ev.preventDefault();
+
+    if (this.state.startNum > this.state.endNum) {
+      this.setState({
+        errorMsg: "Start number can't be great than the end number."
+      });
+      return;
+    } else if (this.state.startNum < 0) {
+      this.setState({ errorMsg: "Start number can't be negative " });
+      return;
+    } else if (this.state.endNum > 9999) {
+      this.setState({ errorMsg: "End number can't be greater than 9999" });
+      return;
+    }
+
+    this.setState({ errorMsg: "" });
     this.setState({
       textValue: "",
       value: "",
@@ -51,7 +67,7 @@ export class NumberCategory extends Component {
     });
 
     this.number = Math.floor(
-      Math.random() * (this.state.endNum + 1 - this.state.startNum) +
+      Math.random() * (this.state.endNum - this.state.startNum + 1) +
         this.state.startNum
     );
   }
@@ -62,17 +78,21 @@ export class NumberCategory extends Component {
   }
 
   handleStartChange(ev) {
-    this.setState({ startNum: ev.target.value });
+    this.setState({ startNum: ev.currentTarget.value });
   }
 
   handleEndChange(ev) {
-    this.setState({ endNum: ev.target.value });
+    this.setState({ endNum: ev.currentTarget.value });
   }
 
   render() {
     return (
       <div>
-        <AudioBtn style={{ cursor: "pointer" }} category="number" value={this.number} />
+        <AudioBtn
+          style={{ cursor: "pointer" }}
+          category="number"
+          value={this.number}
+        />
         <TextField
           id="standard-number"
           label="Number"
@@ -96,7 +116,7 @@ export class NumberCategory extends Component {
           />
           <TextField
             id="beginning-number"
-            label="Start"
+            label="End"
             value={this.state.endNum}
             onChange={this.handleEndChange}
             type="number"
@@ -106,30 +126,19 @@ export class NumberCategory extends Component {
           />
         </div>
         <div>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            onClick={this.checkAnswer}
-          >
+          <Button style={{ margin: "10px" }} onClick={this.checkAnswer}>
             Check Answer
           </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            onClick={this.giveUp}
-          >
+          <Button style={{ margin: "10px" }} onClick={this.giveUp}>
             I Give Up
           </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            onClick={this.handleClick}
-          >
+          <Button style={{ margin: "10px" }} onClick={this.newAudio}>
             New Number
           </Button>
         </div>
         <p style={{ color: "black" }}>{this.state.textValue}</p>
         <p style={{ color: "black" }}>{this.state.answer}</p>
+        <p style={{ color: "black" }}>{this.state.errorMsg}</p>
       </div>
     );
   }
