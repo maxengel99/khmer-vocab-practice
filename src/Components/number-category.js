@@ -72,7 +72,7 @@ export class NumberCategory extends Component {
   render() {
     return (
       <div>
-        <AudioBtn style={{ cursor: "pointer" }} category="Number" value={this.number} />
+        <AudioBtn style={{ cursor: "pointer" }} category="number" value={this.number} />
         <TextField
           id="standard-number"
           label="Number"
