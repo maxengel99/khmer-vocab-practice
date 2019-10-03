@@ -4,7 +4,8 @@ import React, { Component } from "react";
 
 const categoryToFileNameMap = {
   "number": "Numbers",
-  "day": "DaysOfTheWeek"
+  "day": "DaysOfTheWeek",
+  "month": "Months"
 };
 
 function createUrl(category, value) {

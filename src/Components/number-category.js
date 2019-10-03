@@ -67,9 +67,8 @@ export class NumberCategory extends Component {
     });
 
     this.number = Math.floor(
-      Math.random() * (this.state.endNum - this.state.startNum + 1) +
-        this.state.startNum
-    );
+      Math.random() * (this.state.endNum - this.state.startNum + 1)
+    ) + parseInt(this.state.startNum);
   }
 
   giveUp(ev) {
@@ -78,6 +77,7 @@ export class NumberCategory extends Component {
   }
 
   handleStartChange(ev) {
+    console.log(ev.currentTarget.value);
     this.setState({ startNum: ev.currentTarget.value });
   }
 
