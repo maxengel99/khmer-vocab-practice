@@ -66,9 +66,10 @@ export class NumberCategory extends Component {
       answer: ""
     });
 
-    this.number = Math.floor(
-      Math.random() * (this.state.endNum - this.state.startNum + 1)
-    ) + parseInt(this.state.startNum);
+    this.number =
+      Math.floor(
+        Math.random() * (this.state.endNum - this.state.startNum + 1)
+      ) + parseInt(this.state.startNum);
   }
 
   giveUp(ev) {
@@ -136,9 +137,11 @@ export class NumberCategory extends Component {
             New Number
           </Button>
         </div>
-        <p style={{ color: "black" }}>{this.state.textValue}</p>
-        <p style={{ color: "black" }}>{this.state.answer}</p>
-        <p style={{ color: "black" }}>{this.state.errorMsg}</p>
+        <div style={{ height: "40px" }}>
+          <p style={{ color: "black" }}>{this.state.textValue}</p>
+          <p style={{ color: "black" }}>{this.state.answer}</p>
+          <p style={{ color: "black" }}>{this.state.errorMsg}</p>
+        </div>
       </div>
     );
   }

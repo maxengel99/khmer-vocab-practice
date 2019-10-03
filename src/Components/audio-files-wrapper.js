@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { NumberCategory } from "./number-category";
 import { DayOfWeekCategory } from "./day-of-week-category";
+import { MonthCategory } from "./month-category.js";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -9,7 +10,8 @@ import Button from "@material-ui/core/Button";
 
 const CATEGORY_STATES = {
   number: <NumberCategory />,
-  day: <DayOfWeekCategory />
+  day: <DayOfWeekCategory />,
+  month: <MonthCategory />
 };
 
 function Category(state) {
@@ -51,6 +53,14 @@ export class AudioFilesWrapper extends Component {
                 onClick={this.changeCategory}
               >
                 Days of the Week
+              </Button>
+              <Button
+              variant="outlined"
+              style={{ margin: "10px"}}
+              value="month"
+              onClick={this.changeCategory}
+              >
+                Months
               </Button>
             </Toolbar>
           </AppBar>

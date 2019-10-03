@@ -56,8 +56,9 @@ export class MonthCategory extends Component {
           value={this.state.month}
         />
         <div>
+          <div>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="January"
             onClick={this.checkAnswer}
@@ -65,7 +66,7 @@ export class MonthCategory extends Component {
             January
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="February"
             onClick={this.checkAnswer}
@@ -73,7 +74,7 @@ export class MonthCategory extends Component {
             February
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="March"
             onClick={this.checkAnswer}
@@ -81,7 +82,7 @@ export class MonthCategory extends Component {
             March
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="April"
             onClick={this.checkAnswer}
@@ -89,7 +90,7 @@ export class MonthCategory extends Component {
             April
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="May"
             onClick={this.checkAnswer}
@@ -97,15 +98,17 @@ export class MonthCategory extends Component {
             May
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="June"
             onClick={this.checkAnswer}
           >
             June
           </Button>
+          </div>
+          <div>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="July"
             onClick={this.checkAnswer}
@@ -113,7 +116,7 @@ export class MonthCategory extends Component {
             July
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="August"
             onClick={this.checkAnswer}
@@ -121,7 +124,7 @@ export class MonthCategory extends Component {
             August
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="September"
             onClick={this.checkAnswer}
@@ -129,7 +132,7 @@ export class MonthCategory extends Component {
             September
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="October"
             onClick={this.checkAnswer}
@@ -137,7 +140,7 @@ export class MonthCategory extends Component {
             October
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="November"
             onClick={this.checkAnswer}
@@ -145,21 +148,23 @@ export class MonthCategory extends Component {
             November
           </Button>
           <Button
-            style={{ margin: "10px" }}
+            style={{ margin: "10px", width: "100px" }}
             variant="contained"
             value="December"
             onClick={this.checkAnswer}
           >
             December
           </Button>
+          </div>
         </div>
         <div>
           <Button style={{ margin: "10px" }} onClick={this.newAudio}>
             New Audio
           </Button>
         </div>
-        <p style={{ color: "black" }}>{this.state.textValue}</p>
-      </div>
+        <div style={{ height: "40px" }}>
+          <p style={{ color: "black" }}>{this.state.textValue}</p>
+        </div>      </div>
     );
   }
 }

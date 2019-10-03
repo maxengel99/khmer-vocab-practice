@@ -113,7 +113,9 @@ export class DayOfWeekCategory extends Component {
             New Audio
           </Button>
         </div>
-        <p style={{ color: "black" }}>{this.state.textValue}</p>
+        <div style={{ height: "40px" }}>
+          <p style={{ color: "black" }}>{this.state.textValue}</p>
+        </div>
       </div>
     );
   }
