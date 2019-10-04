@@ -3,6 +3,7 @@ import { NumberCategory } from "./number-category";
 import { DayOfWeekCategory } from "./day-of-week-category";
 import { MonthCategory } from "./month-category.js";
 import { TimeOfDayCategory } from "./time-of-day-category.js";
+import { VerbCategory } from "./verb-category.js";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -13,7 +14,8 @@ const CATEGORY_STATES = {
   number: <NumberCategory />,
   day: <DayOfWeekCategory />,
   month: <MonthCategory />,
-  time: <TimeOfDayCategory />
+  time: <TimeOfDayCategory />,
+  verb: <VerbCategory />
 };
 
 function Category(state) {
@@ -71,6 +73,14 @@ export class AudioFilesWrapper extends Component {
                 onClick={this.changeCategory}
               >
                 Time of the Day
+              </Button>
+              <Button
+                variant="outlined"
+                style={{ margin: "10px" }}
+                value="verb"
+                onClick={this.changeCategory}
+              >
+                Verbs
               </Button>
             </Toolbar>
           </AppBar>
