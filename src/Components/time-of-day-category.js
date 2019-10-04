@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import { AudioBtn } from "./audio-btn";
 import Button from "@material-ui/core/Button";
+import morning from "../Images/morning.jpg";
+import noon from "../Images/noon.jpg";
+import afternoon from "../Images/afternoon.jpg";
+import evening from "../Images/evening.jpg";
+import night from "../Images/night.jpg";
 
 /*************************************************************************/
 
-const timeOfDay = [
-  "afternoon",
-  "evening",
-  "morning",
-  "night",
-  "noon"
-];
+const timeOfDay = ["afternoon", "evening", "morning", "night", "noon"];
 
 export class TimeOfDayCategory extends Component {
   constructor(props) {
@@ -32,13 +31,14 @@ export class TimeOfDayCategory extends Component {
     });
   }
 
-  checkAnswer(ev) {
-    if (ev.currentTarget.value !== this.state.time) {
+  checkAnswer = param => {
+    if (param !== this.state.time) {
       this.setState({ textValue: "Incorrect" });
     } else {
       this.setState({ textValue: "Correct!!! " });
     }
-  }
+    console.log(param);
+  };
 
   render() {
     return (
@@ -49,46 +49,36 @@ export class TimeOfDayCategory extends Component {
           value={this.state.time}
         />
         <div>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            value="morning"
-            onClick={this.checkAnswer}
-          >
-            Morning
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            value="noon"
-            onClick={this.checkAnswer}
-          >
-            Noon
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            value="afternoon"
-            onClick={this.checkAnswer}
-          >
-            Afternoon
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            value="evening"
-            onClick={this.checkAnswer}
-          >
-            Evening
-          </Button>
-          <Button
-            style={{ margin: "10px" }}
-            variant="contained"
-            value="night"
-            onClick={this.checkAnswer}
-          >
-            Night
-          </Button>
+          <img
+            src={morning}
+            alt="morning"
+            onClick={e => this.checkAnswer("morning")}
+            style={{ width: "100px", margin: "10px", borderRadius: "25px" }}
+          />
+          <img
+            src={noon}
+            alt="noon"
+            onClick={e => this.checkAnswer("noon")}
+            style={{ width: "100px", margin: "10px", borderRadius: "25px" }}
+          />
+          <img
+            src={afternoon}
+            alt="afternoon"
+            onClick={e => this.checkAnswer("afternoon")}
+            style={{ width: "100px", margin: "10px", borderRadius: "25px" }}
+          />
+          <img
+            src={evening}
+            alt="evening"
+            onClick={e => this.checkAnswer("evening")}
+            style={{ width: "100px", margin: "10px", borderRadius: "25px" }}
+          />
+          <img
+            src={night}
+            alt="night"
+            onClick={e => this.checkAnswer("night")}
+            style={{ width: "100px", margin: "10px", borderRadius: "25px" }}
+          />
         </div>
         <div>
           <Button style={{ margin: "10px" }} onClick={this.newAudio}>
