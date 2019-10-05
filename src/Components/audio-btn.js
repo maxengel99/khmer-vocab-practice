@@ -6,7 +6,8 @@ const categoryToFileNameMap = {
   "number": "Numbers",
   "day": "DaysOfTheWeek",
   "month": "Months",
-  "time": "TimeOfTheDay"
+  "time": "TimeOfTheDay",
+  "verb": "Verbs"
 };
 
 function createUrl(category, value) {

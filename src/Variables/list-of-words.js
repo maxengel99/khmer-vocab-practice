@@ -8,7 +8,7 @@ export const verbs = [
   "to_eat",
   "to_have",
   "to_help",
-  "to_lear",
+  "to_learn",
   "to_like",
   "to_open",
   "to_play",
@@ -24,3 +24,14 @@ export const verbs = [
   "to_watch",
   "to_write"
 ];
+
+export function createVerbImageMap(){
+  let verbImageMap = {};
+
+  verbs.forEach(verb => {
+    verbImageMap[verb] =`../Images/Verbs/${verb}.jpg`;
+  });
+
+  return verbImageMap;
+}
+
