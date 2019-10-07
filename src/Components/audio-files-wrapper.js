@@ -4,6 +4,7 @@ import { DayOfWeekCategory } from "./day-of-week-category";
 import { MonthCategory } from "./month-category.js";
 import { TimeOfDayCategory } from "./time-of-day-category.js";
 import { VerbCategory } from "./verb-category.js";
+import { ColorCategory } from "./color-category.js";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -15,7 +16,8 @@ const CATEGORY_STATES = {
   day: <DayOfWeekCategory />,
   month: <MonthCategory />,
   time: <TimeOfDayCategory />,
-  verb: <VerbCategory />
+  verb: <VerbCategory />,
+  color: <ColorCategory />
 };
 
 function Category(state) {
@@ -82,6 +84,14 @@ export class AudioFilesWrapper extends Component {
               >
                 Verbs
               </Button>
+              <Button
+                variant="outlined"
+                style={{ margin: "10px" }}
+                value="color"
+                onClick={this.changeCategory}
+                >
+                  Colors
+                </Button>
             </Toolbar>
           </AppBar>
         </div>

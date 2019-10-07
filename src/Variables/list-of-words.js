@@ -25,13 +25,18 @@ export const verbs = [
   "to_write"
 ];
 
-export function createVerbImageMap(){
-  let verbImageMap = {};
-
-  verbs.forEach(verb => {
-    verbImageMap[verb] =`../Images/Verbs/${verb}.jpg`;
-  });
-
-  return verbImageMap;
-}
-
+export const colors = [
+  "yellow",
+  "red",
+  "white",
+  "black",
+  "blue",
+  "green",
+  "purple",
+  "brown",
+  "orange",
+  "pink",
+  "gray",
+  "gold",
+  "silver"
+]
