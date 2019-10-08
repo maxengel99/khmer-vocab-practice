@@ -54,7 +54,7 @@ export class ColorCategory extends Component {
           value={this.state.color}
         />
         <div>
-          <Paper style={{ marginTop: "5px", height: "150px" }}>
+          <Paper style={{ marginTop: "5px", height: "120px" }}>
             <div>
               <div
                 style={{
@@ -63,7 +63,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("yellow")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -76,7 +77,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("red")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -89,7 +91,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("white")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -102,7 +105,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("black")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -115,11 +119,12 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
-                onMouseOver={() => this.onMouseEnter("gray")}
+                onMouseOver={() => this.onMouseEnter("blue")}
                 onMouseLeave={() => this.onMouseLeave()}
-                onClick={() => this.checkAnswer("gray")}
+                onClick={() => this.checkAnswer("blue")}
               ></div>
               <div
                 style={{
@@ -128,7 +133,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("green")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -141,7 +147,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("purple")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -154,7 +161,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("brown")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -167,7 +175,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("orange")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -180,7 +189,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("gray")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -193,7 +203,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("gold")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -206,7 +217,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("silver")}
                 onMouseLeave={() => this.onMouseLeave()}
@@ -219,7 +231,8 @@ export class ColorCategory extends Component {
                   height: "40px",
                   margin: "5px",
                   display: "inline-block",
-                  border: "solid gray 1px"
+                  border: "solid gray 1px",
+                  borderRadius: '10px'
                 }}
                 onMouseOver={() => this.onMouseEnter("pink")}
                 onMouseLeave={() => this.onMouseLeave()}
