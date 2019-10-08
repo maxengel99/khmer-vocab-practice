@@ -57,104 +57,104 @@ export class MonthCategory extends Component {
         />
         <div>
           <div>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="January"
-            onClick={this.checkAnswer}
-          >
-            January
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="February"
-            onClick={this.checkAnswer}
-          >
-            February
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="March"
-            onClick={this.checkAnswer}
-          >
-            March
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="April"
-            onClick={this.checkAnswer}
-          >
-            April
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="May"
-            onClick={this.checkAnswer}
-          >
-            May
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="June"
-            onClick={this.checkAnswer}
-          >
-            June
-          </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="January"
+              onClick={this.checkAnswer}
+            >
+              January
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="February"
+              onClick={this.checkAnswer}
+            >
+              February
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="March"
+              onClick={this.checkAnswer}
+            >
+              March
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="April"
+              onClick={this.checkAnswer}
+            >
+              April
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="May"
+              onClick={this.checkAnswer}
+            >
+              May
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="June"
+              onClick={this.checkAnswer}
+            >
+              June
+            </Button>
           </div>
           <div>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="July"
-            onClick={this.checkAnswer}
-          >
-            July
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="August"
-            onClick={this.checkAnswer}
-          >
-            August
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="September"
-            onClick={this.checkAnswer}
-          >
-            September
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="October"
-            onClick={this.checkAnswer}
-          >
-            October
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="November"
-            onClick={this.checkAnswer}
-          >
-            November
-          </Button>
-          <Button
-            style={{ margin: "10px", width: "100px" }}
-            variant="contained"
-            value="December"
-            onClick={this.checkAnswer}
-          >
-            December
-          </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="July"
+              onClick={this.checkAnswer}
+            >
+              July
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="August"
+              onClick={this.checkAnswer}
+            >
+              August
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="September"
+              onClick={this.checkAnswer}
+            >
+              September
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="October"
+              onClick={this.checkAnswer}
+            >
+              October
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="November"
+              onClick={this.checkAnswer}
+            >
+              November
+            </Button>
+            <Button
+              style={{ margin: "10px", width: "100px" }}
+              variant="contained"
+              value="December"
+              onClick={this.checkAnswer}
+            >
+              December
+            </Button>
           </div>
         </div>
         <div>
@@ -164,7 +164,8 @@ export class MonthCategory extends Component {
         </div>
         <div style={{ height: "40px" }}>
           <p style={{ color: "black" }}>{this.state.textValue}</p>
-        </div>      </div>
+        </div>
+      </div>
     );
   }
 }
