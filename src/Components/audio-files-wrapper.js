@@ -5,6 +5,8 @@ import { MonthCategory } from "./month-category.js";
 import { TimeOfDayCategory } from "./time-of-day-category.js";
 import { VerbCategory } from "./verb-category.js";
 import { ColorCategory } from "./color-category.js";
+import { FoodCategory } from "./food-category.js";
+import { LetterCategory } from "./letter-category.js";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
@@ -17,7 +19,9 @@ const CATEGORY_STATES = {
   month: <MonthCategory />,
   time: <TimeOfDayCategory />,
   verb: <VerbCategory />,
-  color: <ColorCategory />
+  color: <ColorCategory />,
+  food: <FoodCategory />,
+  letter: <LetterCategory />
 };
 
 function Category(state) {
@@ -91,7 +95,23 @@ export class AudioFilesWrapper extends Component {
                 onClick={this.changeCategory}
                 >
                   Colors
-                </Button>
+              </Button>
+              <Button
+                variant="outlined"
+                style={{ margin: "10px" }}
+                value="food"
+                onClick={this.changeCategory}
+                >
+                  Food
+              </Button>
+              <Button
+                variant="outlined"
+                style={{ margin: "10px" }}
+                value="letter"
+                onClick={this.changeCategory}
+                >
+                  Letter
+              </Button>
             </Toolbar>
           </AppBar>
         </div>

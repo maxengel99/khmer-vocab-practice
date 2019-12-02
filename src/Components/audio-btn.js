@@ -12,7 +12,10 @@ const categoryToFileNameMap = {
 };
 
 function createUrl(category, value) {
-  return `https://raw.githubusercontent.com/maxengel99/khmer-number-website/master/src/SoundFiles/${categoryToFileNameMap[category]}/${value}.mp3`;
+  
+  return category === "letter" ? 
+  `https://raw.githubusercontent.com/maxengel99/khmer-letter-anki/master/files/${value}.mp3` :
+  `https://raw.githubusercontent.com/maxengel99/khmer-number-website/master/src/SoundFiles/${categoryToFileNameMap[category]}/${value}.mp3`;
 }
 
 export class AudioBtn extends Component {
