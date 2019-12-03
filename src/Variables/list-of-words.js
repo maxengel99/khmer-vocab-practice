@@ -101,7 +101,8 @@ export const consonants = [
   "ជ",
   "ឆ",
   "ឈ",
-  "ញ៉ុ",
+  "ញ",
+  "ញ៉",
   "ដ",
   "ឌ",
   "ថ",
@@ -111,6 +112,7 @@ export const consonants = [
 ]
 
 export const vowels = [
+  "",
   "ា",
   "ិ",
   "ី",
