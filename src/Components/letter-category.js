@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { AudioBtn } from "./audio-btn";
 import { consonants, vowels } from "../Variables/list-of-words";
 import Button from "@material-ui/core/Button";
+import Checkbox from "@material-ui/core/Checkbox";
 
 /*************************************************************************/
 
@@ -14,7 +15,9 @@ const first_series_consonants = [
   "ញ៉",
   "ដ",
   "ថ",
-  "ឋ"
+  "ឋ",
+  "ណ",
+  "ត"
 ]
 
 const second_series_consonants = [
@@ -26,7 +29,9 @@ const second_series_consonants = [
   "ញ",
   "ឌ",
   "ធ",
-  "ឍ"
+  "ឍ",
+  "ន",
+  "ទ"
 ]
 
 const vowel_to_phonetic_map_first = {
@@ -38,7 +43,9 @@ const vowel_to_phonetic_map_first = {
   "ឺ": "əɨ",
   "ុ": "o",
   "ូ": "ou",
-  "ួ": "uə"
+  "ួ": "uə",
+  "ើ": "aə",
+  "ឿ": "ɨə"
 }
 
 const vowel_to_phonetic_map_second = {
@@ -50,7 +57,9 @@ const vowel_to_phonetic_map_second = {
   "ឺ": "ɨɨ",
   "ុ": "u",
   "ូ": "uu",
-  "ួ": "uə"
+  "ួ": "uə",
+  "ើ": "əə",
+  "ឿ": "ɨə"
 }
 
 export class LetterCategory extends Component {
@@ -60,11 +69,13 @@ export class LetterCategory extends Component {
     this.state = {
       curConsonant: consonants[Math.floor(Math.random() * consonants.length)],
       curVowel: vowels[Math.floor(Math.random() * vowels.length)],
-      phonetic: false
+      phonetic: false,
+      checked: false
     }
 
     this.nextLetter = this.nextLetter.bind(this);
     this.showPhonetic = this.showPhonetic.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   nextLetter(ev) {
@@ -83,14 +94,26 @@ export class LetterCategory extends Component {
     });
   }
 
+  handleChange(){
+    this.setState(prevState => ({
+      checked: !prevState.checked
+    }));
+  }
+
+
   render() {
+
     return (
       <div>
-        <div style={{ color: "black", margin: "10px", fontSize: "100px"}}>{this.state.curConsonant + this.state.curVowel}</div>
+        <Checkbox 
+          checked={this.state.checked}
+          onChange={this.handleChange}
+        />
+        <div style={{ color: "black", margin: "10px", fontSize: "100px"}}>{this.state.curConsonant + (this.state.checked ? "" : this.state.curVowel)}</div>
         <AudioBtn
           style={{ cursor: "pointer" }}
           category="letter"
-          value={this.state.curConsonant + this.state.curVowel}
+          value={this.state.curConsonant + (this.state.checked ? "" : this.state.curVowel)}
         />
         <Button style={{ margin: "10px" }} onClick={this.nextLetter}>
           Next

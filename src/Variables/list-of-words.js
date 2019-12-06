@@ -108,7 +108,11 @@ export const consonants = [
   "ថ",
   "ធ",
   "ឋ",
-  "ឍ"
+  "ឍ",
+  "ណ",
+  "ន",
+  "ត",
+  "ទ"
 ]
 
 export const vowels = [
@@ -120,5 +124,7 @@ export const vowels = [
   "ឺ",
   "ុ",
   "ូ",
-  "ួ"
+  "ួ",
+  "ើ",
+  "ឿ"
 ]
