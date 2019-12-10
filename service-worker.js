@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/khmer-practice-website/precache-manifest.81001811d96bc693383ade247d971a39.js"
+  "/khmer-practice-website/precache-manifest.cbf491a4bb5606d33b469bd8233c73c3.js"
 );
 
 self.addEventListener('message', (event) => {

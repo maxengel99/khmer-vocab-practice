@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a02dceec759b069df909a2db71764380",
+    "revision": "2964ff6a5909a1fda29a39977dfc4195",
     "url": "/khmer-practice-website/index.html"
   },
   {
-    "revision": "93d53d560993d3790fb4",
+    "revision": "17ca102dba5fe7286d32",
     "url": "/khmer-practice-website/static/css/main.02078b5f.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/khmer-practice-website/static/js/2.c201d000.chunk.js"
   },
   {
-    "revision": "93d53d560993d3790fb4",
-    "url": "/khmer-practice-website/static/js/main.84be9a4a.chunk.js"
+    "revision": "17ca102dba5fe7286d32",
+    "url": "/khmer-practice-website/static/js/main.d364dee1.chunk.js"
   },
   {
     "revision": "e8a70ddb962c255780a1",
