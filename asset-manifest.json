@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/maxengel99/khmer-practice-website/static/css/main.02078b5f.chunk.css",
+    "main.js": "/maxengel99/khmer-practice-website/static/js/main.00654e26.chunk.js",
+    "main.js.map": "/maxengel99/khmer-practice-website/static/js/main.00654e26.chunk.js.map",
+    "runtime~main.js": "/maxengel99/khmer-practice-website/static/js/runtime~main.0f855874.js",
+    "runtime~main.js.map": "/maxengel99/khmer-practice-website/static/js/runtime~main.0f855874.js.map",
+    "static/js/2.c201d000.chunk.js": "/maxengel99/khmer-practice-website/static/js/2.c201d000.chunk.js",
+    "static/js/2.c201d000.chunk.js.map": "/maxengel99/khmer-practice-website/static/js/2.c201d000.chunk.js.map",
+    "index.html": "/maxengel99/khmer-practice-website/index.html",
+    "precache-manifest.b8036642de8529cab1e49f6e5829556e.js": "/maxengel99/khmer-practice-website/precache-manifest.b8036642de8529cab1e49f6e5829556e.js",
+    "service-worker.js": "/maxengel99/khmer-practice-website/service-worker.js",
+    "static/css/main.02078b5f.chunk.css.map": "/maxengel99/khmer-practice-website/static/css/main.02078b5f.chunk.css.map",
+    "static/media/afternoon.jpg": "/maxengel99/khmer-practice-website/static/media/afternoon.ff7469b3.jpg",
+    "static/media/evening.jpg": "/maxengel99/khmer-practice-website/static/media/evening.bc624dae.jpg",
+    "static/media/morning.jpg": "/maxengel99/khmer-practice-website/static/media/morning.ae900651.jpg",
+    "static/media/night.jpg": "/maxengel99/khmer-practice-website/static/media/night.7a764f39.jpg",
+    "static/media/noon.jpg": "/maxengel99/khmer-practice-website/static/media/noon.ff2d4240.jpg",
+    "static/media/to_close.jpg": "/maxengel99/khmer-practice-website/static/media/to_close.89a2ef87.jpg",
+    "static/media/to_drink.jpg": "/maxengel99/khmer-practice-website/static/media/to_drink.a2204ab7.jpg",
+    "static/media/to_have.jpg": "/maxengel99/khmer-practice-website/static/media/to_have.fb15b9ca.jpg",
+    "static/media/to_play.jpg": "/maxengel99/khmer-practice-website/static/media/to_play.151c2ec7.jpg",
+    "static/media/to_read.jpg": "/maxengel99/khmer-practice-website/static/media/to_read.42c47637.jpg",
+    "static/media/to_ride.jpg": "/maxengel99/khmer-practice-website/static/media/to_ride.cee603db.jpg",
+    "static/media/to_teach.jpg": "/maxengel99/khmer-practice-website/static/media/to_teach.b0e9f38e.jpg"
+  }
+}
