@@ -73,7 +73,7 @@ const vowel_to_phonetic_map_second = {
   "ើ": "əə",
   "ឿ": "ɨə",
   "ៀ": "iə",
-  " េ": "ee",
+  "េ": "ee",
   "ែ": "ƐƐ",
   "ៃ": "ɨy"
 }
