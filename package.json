@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/maxengel99/khmer-practice-website",
+  "homepage": "https://maxengel99.github.io/khmer-practice-website/",
   "dependencies": {
     "@material-ui/core": "^4.4.0",
     "gh-pages": "^2.1.1",

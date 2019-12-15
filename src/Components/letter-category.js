@@ -17,7 +17,11 @@ const first_series_consonants = [
   "ថ",
   "ឋ",
   "ណ",
-  "ត"
+  "ត",
+  "ប",
+  "ប៉",
+  "ផ",
+  "ម៉",
 ]
 
 const second_series_consonants = [
@@ -31,7 +35,11 @@ const second_series_consonants = [
   "ធ",
   "ឍ",
   "ន",
-  "ទ"
+  "ទ",
+  "ប៊",
+  "ព",
+  "ភ",
+  "ម"
 ]
 
 const vowel_to_phonetic_map_first = {
@@ -45,7 +53,11 @@ const vowel_to_phonetic_map_first = {
   "ូ": "ou",
   "ួ": "uə",
   "ើ": "aə",
-  "ឿ": "ɨə"
+  "ឿ": "ɨə",
+  "ៀ": "iə",
+  " េ": "ei",
+  "ែ": "ae",
+  "ៃ": "ay"
 }
 
 const vowel_to_phonetic_map_second = {
@@ -59,7 +71,11 @@ const vowel_to_phonetic_map_second = {
   "ូ": "uu",
   "ួ": "uə",
   "ើ": "əə",
-  "ឿ": "ɨə"
+  "ឿ": "ɨə",
+  "ៀ": "iə",
+  " េ": "ee",
+  "ែ": "ƐƐ",
+  "ៃ": "ɨy"
 }
 
 export class LetterCategory extends Component {
@@ -105,10 +121,6 @@ export class LetterCategory extends Component {
 
     return (
       <div>
-        <Checkbox 
-          checked={this.state.checked}
-          onChange={this.handleChange}
-        />
         <div style={{ color: "black", margin: "10px", fontSize: "100px"}}>{this.state.curConsonant + (this.state.checked ? "" : this.state.curVowel)}</div>
         <AudioBtn
           style={{ cursor: "pointer" }}
@@ -129,6 +141,13 @@ export class LetterCategory extends Component {
             }
           </div>
         ) : null}
+        <div>
+          <p style={{color: "black"}}>No vowels?</p>
+        <Checkbox 
+          checked={this.state.checked}
+          onChange={this.handleChange}
+        />
+        </div>
       </div>
     );
   }
